@@ -29,7 +29,6 @@ class _AidanaApp extends StatefulWidget {
 
 class _AidanaAppState extends State<_AidanaApp> {
   late final appRouter = GetIt.I.get<AppRouter>();
-  late final easyLoading = GetIt.I.get<EasyLoading>();
 
   @override
   Widget build(BuildContext context) {
@@ -47,6 +46,7 @@ class _AidanaAppState extends State<_AidanaApp> {
       child: CupertinoApp.router(
         theme: const CupertinoThemeData(
           scaffoldBackgroundColor: AppColors.pageBackground,
+          brightness: Brightness.light,
         ),
         routerConfig: appRouter.config(),
         builder: EasyLoading.init(),
